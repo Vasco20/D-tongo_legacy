@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="pt-AO">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>D'TONGO LEGACY — Marcações</title>
+<meta name="description" content="D'Tongo Legacy — cortes, barba e laminagem. Marque o seu horário online, na barbearia ou ao domicílio.">
+<meta name="keywords" content="barbearia, corte de cabelo, barba, laminagem, marcação online, corte domiciliar, Angola">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dtongolegacy.com/">
+
+<!-- Open Graph / redes sociais -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="D'Tongo Legacy">
+<meta property="og:title" content="D'TONGO LEGACY — O teu estilo. A nossa assinatura.">
+<meta property="og:description" content="Cortes, barba e laminagem com marcação online — na barbearia ou ao domicílio.">
+<meta property="og:url" content="https://dtongolegacy.com/">
+<meta property="og:locale" content="pt_AO">
+
+<!-- Dados estruturados para o Google (LocalBusiness) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HairSalon",
+  "name": "D'Tongo Legacy",
+  "image": "https://dtongolegacy.com/og-image.jpg",
+  "description": "Barbearia premium — cortes, barba, laminagem e atendimento domiciliar.",
+  "url": "https://dtongolegacy.com/",
+  "telephone": "+244936039337",
+  "priceRange": "500Kz - 3000Kz",
+  "openingHours": "Mo-Sa 09:00-19:00"
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Playfair+Display:ital,wght@0,600;1,600;1,700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --bg:#0a0807;
+  --bg-soft:#120e0b;
+  --surface:#1a1512;
+  --surface-2:#221b16;
+  --line: rgba(224,166,90,.22);
+  --line-strong: rgba(224,166,90,.45);
+  --gold:#c9791e;
+  --gold-light:#e3a552;
+  --gold-dim: #8a5a1f;
+  --white:#f6f1e6;
+  --muted:#a89a87;
+  --muted-2:#7c6f60;
+  --danger:#b23a2f;
+  --ok:#5a8a5f;
+  --radius: 2px;
+  --maxw: 1180px;
+  --shadow: 0 20px 50px -20px rgba(0,0,0,.7);
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:
+    radial-gradient(ellipse at 20% -10%, rgba(201,121,30,.10), transparent 45%),
+    radial-gradient(ellipse at 100% 0%, rgba(201,121,30,.06), transparent 40%),
+    var(--bg);
+  color:var(--white);
+  font-family:'Work Sans', sans-serif;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.5;
+  padding-bottom:64px; /* space for mobile CTA bar */
+}
+@media(min-width:900px){ body{padding-bottom:0;} }
+
+h1,h2,h3,h4{ font-family:'Bebas Neue', sans-serif; letter-spacing:.04em; font-weight:400; margin:0; color:var(--white); }
+.script{ font-family:'Playfair Display', serif; font-style:italic; font-weight:600; color:var(--gold-light); }
+a{color:inherit;}
+img{max-width:100%; display:block;}
+button{font-family:inherit;}
+::selection{ background:var(--gold); color:#120e0b; }
+:focus-visible{ outline:2px solid var(--gold-light); outline-offset:3px; }
+
+.wrap{ max-width:var(--maxw); margin:0 auto; padding:0 22px; }
+.eyebrow{
+  text-transform:uppercase; letter-spacing:.22em; font-size:11.5px; color:var(--gold-light);
+  font-weight:600; display:flex; align-items:center; gap:10px; margin-bottom:14px;
+}
+.eyebrow::before{ content:""; width:26px; height:1px; background:var(--gold); display:inline-block; }
+.section{ padding:74px 0; position:relative; }
+.section-title{ font-size:clamp(34px,5.5vw,52px); line-height:1; margin-bottom:16px; }
+.section-lead{ color:var(--muted); max-width:560px; font-size:15.5px; }
+.hairline{ height:1px; background:linear-gradient(90deg, transparent, var(--line-strong), transparent); border:0; margin:0; }
+.leather{
+  background-image:
+    repeating-linear-gradient(115deg, rgba(255,255,255,.012) 0 2px, transparent 2px 6px),
+    repeating-linear-gradient(25deg, rgba(0,0,0,.35) 0 2px, transparent 2px 8px);
+}
+
+/* ============ BUTTONS ============ */
+.btn{
+  display:inline-flex; align-items:center; justify-content:center; gap:8px;
+  padding:14px 26px; font-weight:700; font-size:13.5px; letter-spacing:.09em; text-transform:uppercase;
+  border-radius:var(--radius); border:1px solid transparent; cursor:pointer; transition:all .2s ease;
+  text-decoration:none; white-space:nowrap;
+}
+.btn-gold{ background:linear-gradient(180deg,var(--gold-light),var(--gold)); color:#160f09; box-shadow:0 10px 24px -10px rgba(201,121,30,.55); }
+.btn-gold:hover{ filter:brightness(1.08); transform:translateY(-1px); }
+.btn-outline{ background:transparent; border-color:var(--line-strong); color:var(--white); }
+.btn-outline:hover{ border-color:var(--gold-light); color:var(--gold-light); }
+.btn-ghost{ background:var(--surface); border-color:var(--line); color:var(--white); }
+.btn-ghost:hover{ border-color:var(--gold-light); }
+.btn-block{ width:100%; }
+.btn-sm{ padding:9px 16px; font-size:11.5px; }
+.btn[disabled]{ opacity:.4; cursor:not-allowed; transform:none !important; }
+.btn-danger{ background:transparent; border-color:rgba(178,58,47,.5); color:#e08c82; }
+.btn-danger:hover{ border-color:#e08c82; }
+
+/* ============ HEADER ============ */
+header.site{
+  position:fixed; top:0; left:0; right:0; z-index:60;
+  background:rgba(10,8,7,.86); backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.nav{ display:flex; align-items:center; justify-content:space-between; height:70px; }
+.logo{ font-family:'Bebas Neue',sans-serif; font-size:22px; letter-spacing:.12em; }
+.logo b{ color:var(--gold-light); }
+.nav-links{ display:none; gap:26px; font-size:12.5px; letter-spacing:.08em; text-transform:uppercase; font-weight:600; color:var(--muted); }
+.nav-links a{ text-decoration:none; padding:6px 0; border-bottom:1px solid transparent; transition:.2s; }
+.nav-links a:hover{ color:var(--white); border-color:var(--gold); }
+@media(min-width:960px){ .nav-links{ display:flex; } }
+.nav-cta{ display:none; }
+@media(min-width:960px){ .nav-cta{ display:inline-flex; } }
+.burger{ display:inline-flex; background:none; border:1px solid var(--line-strong); color:var(--white); padding:9px 11px; border-radius:var(--radius); }
+@media(min-width:960px){ .burger{ display:none; } }
+.mobile-menu{ display:none; flex-direction:column; gap:2px; padding:10px 22px 18px; border-top:1px solid var(--line); background:rgba(10,8,7,.98); }
+.mobile-menu.open{ display:flex; }
+.mobile-menu a{ padding:12px 4px; text-decoration:none; color:var(--white); border-bottom:1px solid var(--line); font-size:14px; letter-spacing:.04em; text-transform:uppercase; font-weight:600; }
+
+/* ============ HERO ============ */
+.hero{
+  position:relative; padding:150px 0 90px; overflow:hidden;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(201,121,30,.16), transparent 40%),
+    linear-gradient(180deg, #0a0807 0%, #100c09 100%);
+}
+.hero::after{
+  content:""; position:absolute; inset:0; opacity:.5; pointer-events:none;
+  background-image:repeating-linear-gradient(120deg, rgba(255,255,255,.015) 0 1px, transparent 1px 40px);
+}
+.hero-inner{ position:relative; z-index:2; text-align:center; }
+.hero-mark{ font-size:30px; color:var(--gold); margin-bottom:18px; letter-spacing:.3em; }
+.hero h1{ font-size:clamp(52px,11vw,108px); line-height:.95; }
+.hero .script-line{ display:block; font-size:clamp(30px,6vw,50px); margin-top:6px; }
+.hero-sub{ max-width:480px; margin:26px auto 34px; color:var(--muted); font-size:15.5px; }
+.hero-actions{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
+.hero-strip{ margin-top:56px; display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.hero-strip div{ padding:16px 8px; text-align:center; border-right:1px solid var(--line); }
+.hero-strip div:last-child{ border-right:none; }
+.hero-strip strong{ display:block; font-family:'Bebas Neue'; font-size:22px; color:var(--gold-light); letter-spacing:.06em; }
+.hero-strip span{ font-size:11px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; }
+
+/* ============ INTRO ============ */
+.intro{ text-align:center; max-width:640px; margin:0 auto; padding:60px 0 10px; }
+.intro p{ color:var(--muted); font-size:16px; }
+
+/* ============ SERVICES ============ */
+.grid-services{ display:grid; grid-template-columns:1fr; gap:16px; margin-top:38px; }
+@media(min-width:720px){ .grid-services{ grid-template-columns:repeat(2,1fr); } }
+.svc-card{
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--radius);
+  padding:24px; display:flex; flex-direction:column; gap:10px; transition:.2s; position:relative;
+}
+.svc-card:hover{ border-color:var(--line-strong); transform:translateY(-2px); }
+.svc-top{ display:flex; justify-content:space-between; align-items:flex-start; gap:12px; }
+.svc-top h3{ font-size:23px; letter-spacing:.03em; }
+.svc-price{ font-family:'Bebas Neue'; color:var(--gold-light); font-size:20px; white-space:nowrap; }
+.svc-desc{ color:var(--muted); font-size:13.5px; flex:1; }
+.svc-meta{ color:var(--muted-2); font-size:11.5px; text-transform:uppercase; letter-spacing:.08em; }
+.svc-foot{ display:flex; justify-content:space-between; align-items:center; margin-top:8px; }
+
+/* ============ PRICING TABLE (poster motif) ============ */
+.price-frame{
+  border:1px solid var(--gold); padding:6px; margin-top:38px; border-radius:var(--radius);
+  background:linear-gradient(180deg, rgba(201,121,30,.05), transparent);
+}
+.price-row{
+  display:flex; justify-content:space-between; align-items:center; gap:14px;
+  padding:17px 16px; border-bottom:1px dashed var(--line);
+}
+.price-row:last-child{ border-bottom:none; }
+.price-name{ font-weight:600; font-size:15px; }
+.price-name.accent{ color:var(--gold-light); }
+.price-right{ display:flex; align-items:center; gap:16px; }
+.price-value{ font-family:'Bebas Neue'; font-size:20px; letter-spacing:.03em; white-space:nowrap; }
+
+/* ============ CTA BAND ============ */
+.band{
+  background:var(--surface-2); border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  padding:56px 0; text-align:center;
+}
+.band h2{ font-size:clamp(30px,5vw,44px); margin-bottom:14px; }
+.band p{ color:var(--muted); max-width:480px; margin:0 auto 26px; font-size:15px; }
+.steps-mini{ display:flex; flex-wrap:wrap; justify-content:center; gap:10px; margin:30px 0 6px; }
+.steps-mini span{
+  border:1px solid var(--line); padding:8px 14px; border-radius:20px; font-size:11.5px;
+  text-transform:uppercase; letter-spacing:.06em; color:var(--muted); background:var(--surface);
+}
+
+/* ============ DOMICILIO ============ */
+.domicilio-panel{
+  margin-top:38px; border:1px solid var(--line-strong); border-radius:var(--radius);
+  background:linear-gradient(135deg, rgba(201,121,30,.08), transparent 60%), var(--surface);
+  padding:34px; display:grid; gap:22px;
+}
+@media(min-width:840px){ .domicilio-panel{ grid-template-columns:1.1fr .9fr; align-items:center; } }
+.taxa-box{
+  border:1px solid var(--gold); padding:18px 20px; text-align:center; background:rgba(201,121,30,.06);
+}
+.taxa-box .amount{ font-family:'Bebas Neue'; font-size:34px; color:var(--gold-light); }
+.taxa-box .label{ font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--muted); }
+.domicilio-list{ list-style:none; padding:0; margin:18px 0 0; display:grid; gap:10px; }
+.domicilio-list li{ display:flex; gap:10px; font-size:13.5px; color:var(--muted); }
+.domicilio-list li::before{ content:"—"; color:var(--gold); }
+
+/* ============ GALLERY ============ */
+.gallery-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-top:34px; }
+@media(min-width:720px){ .gallery-grid{ grid-template-columns:repeat(4,1fr); } }
+.gal-tile{
+  aspect-ratio:3/4; border:1px solid var(--line); position:relative; overflow:hidden;
+  display:flex; align-items:flex-end; padding:14px; border-radius:var(--radius);
+  transition:.3s;
+}
+.gal-tile:hover{ border-color:var(--line-strong); }
+.gal-tile img{ position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:1; transition:.4s; }
+.gal-tile:hover img{ transform:scale(1.05); }
+.gal-tile span{ position:relative; z-index:2; font-size:11px; text-transform:uppercase; letter-spacing:.1em; color:var(--white); font-weight:600; }
+.gal-tile::after{ content:""; position:absolute; inset:0; background:linear-gradient(180deg, transparent 45%, rgba(0,0,0,.75)); z-index:1; }
+.gal-note{ margin-top:16px; color:var(--muted-2); font-size:12px; }
+
+/* ============ ABOUT ============ */
+.about-wrap{ display:grid; gap:30px; }
+@media(min-width:860px){ .about-wrap{ grid-template-columns:1fr 1fr; align-items:center; } }
+.about-frame{
+  border:1px solid var(--line); padding:30px; background:var(--surface);
+}
+.about-frame p{ color:var(--muted); font-size:15px; }
+.pillars{ display:grid; gap:14px; margin-top:20px; }
+.pillar{ display:flex; gap:14px; align-items:flex-start; }
+.pillar .dot{ width:7px; height:7px; background:var(--gold); margin-top:8px; flex:none; border-radius:1px; }
+.pillar h4{ font-size:15px; font-family:'Work Sans'; font-weight:700; letter-spacing:.02em; margin-bottom:4px; }
+.pillar p{ color:var(--muted); font-size:13px; margin:0; }
+
+/* ============ CONTACT ============ */
+.contact-grid{ display:grid; gap:16px; margin-top:34px; }
+@media(min-width:760px){ .contact-grid{ grid-template-columns:1fr 1fr; } }
+.contact-card{ border:1px solid var(--line); background:var(--surface); padding:22px; }
+.contact-card h4{ font-family:'Work Sans'; font-weight:700; font-size:13px; text-transform:uppercase; letter-spacing:.08em; color:var(--gold-light); margin-bottom:10px; }
+.contact-card div{ font-size:14px; color:var(--muted); margin-bottom:4px; }
+.map-box{
+  border:1px solid var(--line); background:
+    repeating-linear-gradient(45deg, rgba(201,121,30,.06) 0 2px, transparent 2px 14px), var(--surface);
+  min-height:180px; display:flex; align-items:center; justify-content:center; color:var(--muted-2); font-size:12px; text-transform:uppercase; letter-spacing:.08em;
+}
+
+/* ============ FOOTER ============ */
+footer.site{ border-top:1px solid var(--line); padding:40px 0 30px; text-align:center; }
+footer.site .logo{ justify-content:center; display:flex; margin-bottom:10px; }
+footer.site p{ color:var(--muted-2); font-size:12px; margin:6px 0; }
+footer.site .flinks{ display:flex; gap:18px; justify-content:center; margin:14px 0; font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); }
+footer.site .flinks a{ text-decoration:none; }
+footer.site .flinks a:hover{ color:var(--gold-light); }
+.admin-link{ background:none; border:none; color:var(--muted-2); font-size:11px; text-decoration:underline; cursor:pointer; letter-spacing:.05em; }
+
+/* ============ FLOATING WHATSAPP ============ */
+.wa-float{
+  position:fixed; right:18px; bottom:82px; z-index:70; width:56px; height:56px; border-radius:50%;
+  background:#25D366; display:flex; align-items:center; justify-content:center; box-shadow:0 12px 26px -8px rgba(0,0,0,.6);
+  text-decoration:none; border:2px solid rgba(255,255,255,.15);
+}
+@media(min-width:960px){ .wa-float{ bottom:24px; } }
+.wa-float svg{ width:28px; height:28px; }
+
+/* ============ MOBILE STICKY CTA ============ */
+.mobile-cta{
+  position:fixed; left:0; right:0; bottom:0; z-index:65; padding:10px 14px;
+  background:rgba(10,8,7,.95); border-top:1px solid var(--line-strong); backdrop-filter:blur(8px);
+}
+@media(min-width:960px){ .mobile-cta{ display:none; } }
+
+/* ============ MODAL / WIZARD ============ */
+.overlay{
+  position:fixed; inset:0; z-index:100; background:rgba(6,5,4,.82); backdrop-filter:blur(3px);
+  display:none; align-items:flex-end; justify-content:center; padding:0;
+}
+.overlay.open{ display:flex; }
+@media(min-width:720px){ .overlay{ align-items:center; padding:24px; } }
+.modal{
+  background:var(--bg-soft); border:1px solid var(--line-strong); width:100%; max-width:560px;
+  max-height:92vh; overflow-y:auto; border-radius:6px 6px 0 0; box-shadow:var(--shadow);
+}
+@media(min-width:720px){ .modal{ border-radius:6px; } }
+.modal-head{ display:flex; align-items:center; justify-content:space-between; padding:20px 22px 14px; border-bottom:1px solid var(--line); position:sticky; top:0; background:var(--bg-soft); z-index:2; }
+.modal-head h3{ font-size:22px; }
+.modal-close{ background:none; border:1px solid var(--line-strong); color:var(--white); width:34px; height:34px; border-radius:50%; cursor:pointer; font-size:16px; line-height:1; }
+.modal-body{ padding:22px; }
+.modal-foot{ padding:16px 22px 22px; display:flex; gap:10px; border-top:1px solid var(--line); position:sticky; bottom:0; background:var(--bg-soft); }
+
+.wizard-progress{ display:flex; gap:6px; margin-bottom:22px; }
+.wizard-progress span{ height:3px; flex:1; background:var(--line); border-radius:2px; }
+.wizard-progress span.done{ background:var(--gold); }
+.wizard-step-label{ color:var(--muted); font-size:11px; text-transform:uppercase; letter-spacing:.1em; margin-bottom:18px; }
+
+.opt-list{ display:grid; gap:10px; }
+.opt{
+  display:flex; justify-content:space-between; align-items:center; gap:12px; padding:14px 16px;
+  border:1px solid var(--line); cursor:pointer; background:var(--surface); transition:.15s;
+}
+.opt:hover{ border-color:var(--line-strong); }
+.opt.selected{ border-color:var(--gold); background:rgba(201,121,30,.08); }
+.opt .o-name{ font-weight:600; font-size:14.5px; }
+.opt .o-sub{ font-size:12px; color:var(--muted); }
+.opt .o-price{ font-family:'Bebas Neue'; color:var(--gold-light); font-size:18px; }
+
+.cal-head{ display:flex; justify-content:space-between; align-items:center; margin-bottom:14px; }
+.cal-head button{ background:var(--surface); border:1px solid var(--line-strong); color:var(--white); width:32px; height:32px; cursor:pointer; }
+.cal-grid{ display:grid; grid-template-columns:repeat(7,1fr); gap:6px; text-align:center; }
+.cal-dow{ font-size:10px; color:var(--muted-2); text-transform:uppercase; padding-bottom:6px; }
+.cal-day{ aspect-ratio:1; display:flex; align-items:center; justify-content:center; font-size:13px; border:1px solid transparent; cursor:pointer; background:var(--surface); color:var(--white); }
+.cal-day.blocked{ opacity:.25; cursor:not-allowed; background:transparent; border:1px dashed var(--line); }
+.cal-day.empty{ visibility:hidden; }
+.cal-day.selected{ background:var(--gold); color:#160f09; font-weight:700; }
+.cal-day:not(.blocked):not(.empty):hover{ border-color:var(--gold-light); }
+
+.slot-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:8px; }
+@media(min-width:480px){ .slot-grid{ grid-template-columns:repeat(4,1fr); } }
+.slot{ padding:10px 4px; text-align:center; font-size:13px; border:1px solid var(--line); background:var(--surface); cursor:pointer; }
+.slot.taken{ opacity:.3; text-decoration:line-through; cursor:not-allowed; }
+.slot.selected{ background:var(--gold); color:#160f09; border-color:var(--gold); font-weight:700; }
+.no-slots{ color:var(--muted); font-size:13px; padding:20px 0; text-align:center; }
+
+.field{ margin-bottom:16px; }
+.field label{ display:block; font-size:11.5px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-bottom:7px; }
+.field input, .field textarea, .field select{
+  width:100%; background:var(--surface); border:1px solid var(--line-strong); color:var(--white);
+  padding:12px 14px; font-family:inherit; font-size:14.5px; border-radius:var(--radius);
+}
+.field input:focus, .field textarea:focus, .field select:focus{ border-color:var(--gold-light); outline:none; }
+.field-row{ display:grid; gap:12px; }
+@media(min-width:520px){ .field-row.two{ grid-template-columns:1fr 1fr; } }
+.field small{ color:var(--muted-2); display:block; margin-top:5px; font-size:11.5px; }
+
+.summary-box{ border:1px solid var(--gold); padding:18px 20px; background:rgba(201,121,30,.06); }
+.summary-box .s-row{ display:flex; justify-content:space-between; padding:7px 0; font-size:14px; border-bottom:1px dashed var(--line); color:var(--muted); }
+.summary-box .s-row:last-child{ border-bottom:none; }
+.summary-box .s-row b{ color:var(--white); font-weight:600; }
+.summary-box .s-total{ display:flex; justify-content:space-between; padding-top:12px; margin-top:6px; border-top:1px solid var(--line-strong); }
+.summary-box .s-total b{ font-family:'Bebas Neue'; font-size:24px; color:var(--gold-light); }
+
+.done-state{ text-align:center; padding:20px 6px 6px; }
+.done-check{ width:60px; height:60px; border-radius:50%; border:2px solid var(--gold); display:flex; align-items:center; justify-content:center; margin:0 auto 18px; font-size:26px; color:var(--gold-light); }
+.mode-toggle{ display:flex; gap:8px; margin-bottom:20px; }
+.mode-toggle button{ flex:1; padding:11px; border:1px solid var(--line-strong); background:var(--surface); color:var(--muted); font-size:12px; text-transform:uppercase; letter-spacing:.06em; cursor:pointer; font-weight:700; }
+.mode-toggle button.active{ background:var(--gold); color:#160f09; border-color:var(--gold); }
+
+/* ============ ADMIN ============ */
+.admin-login{ max-width:360px; margin:0 auto; }
+.admin-bar{ display:flex; justify-content:space-between; align-items:center; margin-bottom:20px; flex-wrap:wrap; gap:10px; }
+.admin-tabs{ display:flex; gap:6px; flex-wrap:wrap; margin-bottom:24px; }
+.admin-tab{ padding:9px 15px; border:1px solid var(--line-strong); background:var(--surface); color:var(--muted); font-size:11.5px; text-transform:uppercase; letter-spacing:.06em; cursor:pointer; }
+.admin-tab.active{ background:var(--gold); color:#160f09; border-color:var(--gold); font-weight:700; }
+.kpi-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:12px; margin-bottom:28px; }
+@media(min-width:760px){ .kpi-grid{ grid-template-columns:repeat(4,1fr); } }
+.kpi{ border:1px solid var(--line); background:var(--surface); padding:18px; }
+.kpi .n{ font-family:'Bebas Neue'; font-size:30px; color:var(--gold-light); }
+.kpi .l{ font-size:11px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted); margin-top:4px; }
+.table-wrap{ overflow-x:auto; border:1px solid var(--line); }
+table.admin-table{ width:100%; border-collapse:collapse; font-size:13px; min-width:720px; }
+table.admin-table th{ text-align:left; padding:12px 14px; background:var(--surface-2); color:var(--gold-light); font-size:10.5px; text-transform:uppercase; letter-spacing:.08em; border-bottom:1px solid var(--line); }
+table.admin-table td{ padding:12px 14px; border-bottom:1px solid var(--line); color:var(--muted); vertical-align:middle; }
+table.admin-table tr:last-child td{ border-bottom:none; }
+.badge{ padding:4px 10px; font-size:10.5px; text-transform:uppercase; letter-spacing:.05em; border:1px solid; display:inline-block; }
+.badge.pendente{ color:#e3b552; border-color:#e3b552; }
+.badge.confirmada{ color:#7fbf83; border-color:#7fbf83; }
+.badge.cancelada{ color:#e08c82; border-color:#e08c82; }
+.badge.domicilio{ color:var(--gold-light); border-color:var(--gold-light); margin-left:6px; }
+.row-actions{ display:flex; gap:6px; flex-wrap:wrap; }
+.empty-state{ text-align:center; padding:50px 10px; color:var(--muted-2); font-size:13px; }
+.admin-card{ border:1px solid var(--line); background:var(--surface); padding:20px; margin-bottom:14px; }
+.admin-card h4{ font-family:'Work Sans'; font-size:14px; font-weight:700; margin-bottom:14px; color:var(--gold-light); text-transform:uppercase; letter-spacing:.06em; }
+.inline-edit{ display:flex; gap:8px; align-items:center; flex-wrap:wrap; margin-bottom:10px; }
+.inline-edit .nm{ flex:1; min-width:140px; font-size:13.5px; }
+.inline-edit input[type=number]{ width:100px; }
+.toast{
+  position:fixed; top:82px; left:50%; transform:translateX(-50%); z-index:200;
+  background:var(--gold); color:#160f09; padding:12px 22px; font-weight:700; font-size:13px;
+  border-radius:3px; box-shadow:var(--shadow); display:none;
+}
+.toast.show{ display:block; animation:fadeInOut 2.6s ease forwards; }
+@keyframes fadeInOut{ 0%{opacity:0; transform:translate(-50%,-8px);} 12%{opacity:1; transform:translate(-50%,0);} 85%{opacity:1;} 100%{opacity:0;} }
+.hidden{ display:none !important; }
+.note-banner{ border:1px dashed var(--line-strong); background:var(--surface); padding:14px 16px; font-size:12px; color:var(--muted); margin-bottom:24px; }
+.note-banner b{ color:var(--gold-light); }
+</style>
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site">
+  <div class="wrap nav">
+    <div class="logo">D'<b>TONGO</b> LEGACY</div>
+    <nav class="nav-links">
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#precos">Preços</a>
+      <a href="#marcar">Marcar</a>
+      <a href="#domicilio">Corte Domiciliar</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#sobre">Sobre Nós</a>
+      <a href="#contactos">Contactos</a>
+    </nav>
+    <button class="btn btn-gold btn-sm nav-cta" data-action="open-booking" data-mode="loja">Marcar Agora</button>
+    <button class="burger" id="burgerBtn" aria-label="Abrir menu">☰</button>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#inicio">Início</a>
+    <a href="#servicos">Serviços</a>
+    <a href="#precos">Preços</a>
+    <a href="#marcar">Marcar</a>
+    <a href="#domicilio">Corte Domiciliar</a>
+    <a href="#galeria">Galeria</a>
+    <a href="#sobre">Sobre Nós</a>
+    <a href="#contactos">Contactos</a>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero leather" id="inicio">
+  <div class="wrap hero-inner">
+    <div class="hero-mark">✂ — ⚔ — ✂</div>
+    <h1>D'TONGO<span class="script-line script">O teu estilo. A nossa assinatura.</span></h1>
+    <p class="hero-sub">Cuidados masculinos com qualidade, precisão e estilo.</p>
+    <div class="hero-actions">
+      <button class="btn btn-gold" data-action="open-booking" data-mode="loja">Marcar Agora</button>
+      <a href="#precos" class="btn btn-outline">Ver Serviços</a>
+    </div>
+    <div class="hero-strip">
+      <div><strong>7</strong><span>Serviços</span></div>
+      <div><strong>1.500Kz</strong><span>Desde</span></div>
+      <div><strong>Domicílio</strong><span>Disponível</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="intro wrap">
+  <p>Na D'Tongo Legacy, transformamos cada corte numa experiência. Escolha o seu serviço, encontre o melhor horário e faça a sua marcação online.</p>
+</div>
+
+<!-- ============ SERVICES ============ -->
+<section class="section" id="servicos">
+  <div class="wrap">
+    <div class="eyebrow">O que fazemos</div>
+    <h2 class="section-title">Serviços</h2>
+    <p class="section-lead">Cada serviço tem duração estimada e é reservado ao minuto — sem sobreposições, sem espera.</p>
+    <div class="grid-services" id="servicesGrid"></div>
+  </div>
+</section>
+
+<hr class="hairline">
+
+<!-- ============ PRICING ============ -->
+<section class="section" id="precos">
+  <div class="wrap">
+    <div class="eyebrow">Tabela</div>
+    <h2 class="section-title">Preços</h2>
+    <p class="section-lead">Valores praticados na barbearia. Para atendimento domiciliar, consulte a taxa de deslocação.</p>
+    <div class="price-frame" id="priceFrame"></div>
+  </div>
+</section>
+
+<!-- ============ MARCAR (CTA BAND) ============ -->
+<section class="band" id="marcar">
+  <div class="wrap">
+    <div class="eyebrow" style="justify-content:center;">Como funciona</div>
+    <h2>Marque em <span class="script">poucos passos</span></h2>
+    <p>Escolha o serviço, a data e o horário disponível. Sem necessidade de criar conta.</p>
+    <div class="steps-mini">
+      <span>1. Serviço</span><span>2. Profissional</span><span>3. Data</span><span>4. Horário</span><span>5. Seus dados</span><span>6. Confirmação</span>
+    </div>
+    <div class="hero-actions" style="margin-top:24px;">
+      <button class="btn btn-gold" data-action="open-booking" data-mode="loja">Iniciar Marcação</button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CORTE DOMICILIAR ============ -->
+<section class="section" id="domicilio">
+  <div class="wrap">
+    <div class="eyebrow">Novo</div>
+    <h2 class="section-title">O teu corte, <span class="script">onde estiveres.</span></h2>
+    <p class="section-lead">Não precisas sair de casa. A D'Tongo Legacy vai até si. Escolha o serviço, indique a sua localização e marque o melhor horário.</p>
+    <div class="domicilio-panel">
+      <div>
+        <ul class="domicilio-list">
+          <li>Mesma tabela de preços da barbearia</li>
+          <li>Taxa de deslocação fixa, somada automaticamente</li>
+          <li>Horários dedicados ao atendimento domiciliar</li>
+          <li>Confirmação enviada via WhatsApp</li>
+        </ul>
+        <div class="hero-actions" style="justify-content:flex-start; margin-top:24px;">
+          <button class="btn btn-gold" data-action="open-booking" data-mode="domicilio">Marcar Corte Domiciliar</button>
+        </div>
+      </div>
+      <div class="taxa-box">
+        <div class="label">Taxa de deslocação</div>
+        <div class="amount" id="taxaDisplay">+ 1.000 Kz</div>
+        <div class="label">Somada ao valor do serviço</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hairline">
+
+<!-- ============ GALLERY ============ -->
+<section class="section" id="galeria">
+  <div class="wrap">
+    <div class="eyebrow">Trabalhos</div>
+    <h2 class="section-title">Galeria</h2>
+    <div class="gallery-grid">
+      <div class="gal-tile"><img src="image/1.jpeg" alt="Corte na D'Tongo Legacy" loading="lazy"><span>Cortes</span></div>
+      <div class="gal-tile"><img src="image/3.jpeg" alt="Cliente D'Tongo Legacy" loading="lazy"><span>Trabalhos</span></div>
+      <div class="gal-tile"><img src="image/2.jpeg" alt="Barbearia D'Tongo Legacy" loading="lazy"><span>Cortes</span></div>
+      <div class="gal-tile"><img src="image/4.jpeg" alt="Corte D'Tongo Legacy" loading="lazy"><span>Cortes</span></div>
+    </div>
+    <p class="gal-note">Fotos reais dos trabalhos e atendimentos da D'Tongo Legacy.</p>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section" id="sobre">
+  <div class="wrap about-wrap">
+    <div>
+      <div class="eyebrow">Identidade</div>
+      <h2 class="section-title">Mais do que um corte.<br><span class="script">Uma identidade.</span></h2>
+    </div>
+    <div class="about-frame">
+      <p>A D'Tongo Legacy nasceu com o propósito de oferecer serviços de barbearia com qualidade, precisão e uma experiência diferenciada. Cada detalhe é pensado para que o cliente saia não apenas com um novo corte, mas com uma nova presença.</p>
+      <div class="pillars">
+        <div class="pillar"><span class="dot"></span><div><h4>Precisão</h4><p>Técnica apurada em cada corte e cada linha de barba.</p></div></div>
+        <div class="pillar"><span class="dot"></span><div><h4>Elegância</h4><p>Um espaço pensado para o cuidado masculino premium.</p></div></div>
+        <div class="pillar"><span class="dot"></span><div><h4>Consistência</h4><p>O mesmo padrão de qualidade, sempre.</p></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="hairline">
+
+<!-- ============ CONTACT ============ -->
+<section class="section" id="contactos">
+  <div class="wrap">
+    <div class="eyebrow">Fale connosco</div>
+    <h2 class="section-title">Contactos</h2>
+    <div class="contact-grid">
+      <div class="contact-card">
+        <h4>Contacto directo</h4>
+        <div>Telefone: +244 936 039 337</div>
+        <div>WhatsApp: +244 936 039 337</div>
+        <div>Instagram: @dtongolegacy</div>
+        <div>Facebook: /dtongolegacy</div>
+      </div>
+      <div class="contact-card">
+        <h4>Horário de funcionamento</h4>
+        <div id="horarioDisplay">Segunda a Sábado · 09:00 – 19:00</div>
+        <div>Domingo: 09:00 – 16:00</div>
+      </div>
+    </div>
+    <div class="map-box" style="margin-top:16px;">📍 Lunda Sul</div>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site">
+  <div class="wrap">
+    <div class="logo">D'<b>TONGO</b> LEGACY</div>
+    <p>Cuidados masculinos com qualidade, precisão e estilo.</p>
+    <div class="flinks">
+      <a href="#servicos">Serviços</a>
+      <a href="#domicilio">Domicílio</a>
+      <a href="#contactos">Contactos</a>
+    </div>
+    <p>© 2026 D'Tongo Legacy. Todos os direitos reservados.</p>
+    <button class="admin-link" data-action="open-admin">Área administrativa</button>
+  </div>
+</footer>
+
+<!-- ============ FLOATING WHATSAPP ============ -->
+<a class="wa-float" id="waFloat" href="#" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <svg viewBox="0 0 24 24" fill="#fff"><path d="M17.5 14.4c-.3-.1-1.7-.8-1.9-.9-.3-.1-.4-.1-.6.1-.2.3-.7.9-.8 1-.1.2-.3.2-.6.1-.3-.1-1.2-.4-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.1-.3 0-.4.1-.6.1-.1.3-.3.4-.5.1-.1.2-.3.2-.4.1-.2 0-.3 0-.5s-.6-1.5-.9-2c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.5.1-.7.3-.3.3-1 1-1 2.3 0 1.4 1 2.7 1.1 2.9.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.4.2-.7.2-1.2.1-1.4-.1-.1-.2-.2-.5-.3z"/><path d="M12 2C6.5 2 2 6.5 2 12c0 1.9.5 3.6 1.5 5.2L2 22l4.9-1.5c1.5.8 3.2 1.3 5.1 1.3 5.5 0 10-4.5 10-10S17.5 2 12 2zm0 18.2c-1.7 0-3.3-.5-4.7-1.3l-.3-.2-3 .9.9-2.9-.2-.3C3.7 15 3.2 13.5 3.2 12 3.2 7.2 7.2 3.2 12 3.2S20.8 7.2 20.8 12 16.8 20.2 12 20.2z"/></svg>
+</a>
+
+<!-- ============ MOBILE STICKY CTA ============ -->
+<div class="mobile-cta">
+  <button class="btn btn-gold btn-block" data-action="open-booking" data-mode="loja">Marcar Agora</button>
+</div>
+
+<!-- ============ BOOKING MODAL ============ -->
+<div class="overlay" id="bookingOverlay">
+  <div class="modal">
+    <div class="modal-head">
+      <h3 id="bookingTitle">Marcar</h3>
+      <button class="modal-close" data-action="close-booking">✕</button>
+    </div>
+    <div class="modal-body" id="bookingBody"></div>
+    <div class="modal-foot" id="bookingFoot"></div>
+  </div>
+</div>
+
+<!-- ============ ADMIN MODAL ============ -->
+<div class="overlay" id="adminOverlay">
+  <div class="modal" style="max-width:980px;">
+    <div class="modal-head">
+      <h3>Painel Administrativo</h3>
+      <button class="modal-close" data-action="close-admin">✕</button>
+    </div>
+    <div class="modal-body" id="adminBody"></div>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script>
+/* ================= DATA ================= */
+const WHATSAPP_NUMBER = "244936039337";
+
+let services = [
+  {id:1, name:"Corte Normal", price:1500, desc:"Corte clássico à tesoura e máquina.", duration:30},
+  {id:2, name:"Corte com Pintura", price:2000, desc:"Corte com aplicação de coloração.", duration:45},
+  {id:3, name:"Corte com Limpeza", price:2000, desc:"Corte com limpeza de pele incluída.", duration:40},
+  {id:4, name:"Barba + Laminagem", price:1000, desc:"Modelagem de barba com laminagem.", duration:30},
+  {id:5, name:"Limpeza de Rosto", price:1000, desc:"Limpeza facial profunda.", duration:20},
+  {id:6, name:"Laminagem Simples", price:500, desc:"Laminagem de barba.", duration:15},
+  {id:7, name:"Cabelo + Barba + Limpeza de Rosto", price:3000, desc:"Pacote completo D'Tongo Legacy.", duration:60},
+];
+
+let professionals = [
+  {id:1, name:"Mestre D'Tongo"}
+];
+
+let bookings = []; // {id, serviceId, mode, professionalId, date, time, client:{}, price, taxa, total, status, createdAt}
+
+let settings = {
+  workStart: "09:00",
+  workEnd: "19:00",
+  slotMinutes: 30,
+  daysOff: [0], // domingo
+  blockedDates: [],
+  domicilioAtivo: true,
+  taxaDeslocacao: 1000,
+};
+
+let admin = { loggedIn:false };
+
+/* wizard temp state */
+let wiz = {
+  mode:"loja", // loja | domicilio
+  step:1,
+  serviceId:null,
+  professionalId:null,
+  date:null,
+  time:null,
+  calMonth:new Date().getMonth(),
+  calYear:new Date().getFullYear(),
+  client:{ nome:"", telefone:"", whatsapp:"", obs:"", bairro:"", rua:"", ref:"" }
+};
+
+let adminTab = "dashboard";
+
+/* ================= HELPERS ================= */
+function kz(n){ return n.toLocaleString("pt-PT").replace(/,/g,".") + " Kz"; }
+function pad(n){ return n<10 ? "0"+n : ""+n; }
+function toISODate(y,m,d){ return y+"-"+pad(m+1)+"-"+pad(d); }
+function todayISO(){ const t=new Date(); return toISODate(t.getFullYear(),t.getMonth(),t.getDate()); }
+function toast(msg){
+  const t = document.getElementById("toast");
+  t.textContent = msg;
+  t.classList.remove("show"); void t.offsetWidth; t.classList.add("show");
+}
+function serviceById(id){ return services.find(s=>s.id===id); }
+function profById(id){ return professionals.find(p=>p.id===id); }
+
+/* ================= RENDER: SERVICES + PRICING ================= */
+function renderServices(){
+  const grid = document.getElementById("servicesGrid");
+  grid.innerHTML = services.map(s=>`
+    <div class="svc-card">
+      <div class="svc-top"><h3>${s.name}</h3><div class="svc-price">${kz(s.price)}</div></div>
+      <div class="svc-desc">${s.desc}</div>
+      <div class="svc-meta">Duração estimada · ${s.duration} min</div>
+      <div class="svc-foot">
+        <button class="btn btn-ghost btn-sm" data-action="open-booking" data-mode="loja" data-service="${s.id}">Selecionar</button>
+      </div>
+    </div>
+  `).join("");
+
+  const frame = document.getElementById("priceFrame");
+  frame.innerHTML = services.map((s,i)=>`
+    <div class="price-row">
+      <div class="price-name ${i%2? 'accent':''}">${s.name}</div>
+      <div class="price-right">
+        <div class="price-value">${kz(s.price)}</div>
+        <button class="btn btn-gold btn-sm" data-action="open-booking" data-mode="loja" data-service="${s.id}">Marcar</button>
+      </div>
+    </div>
+  `).join("");
+
+  document.getElementById("taxaDisplay").textContent = "+ " + kz(settings.taxaDeslocacao);
+  document.getElementById("horarioDisplay").textContent = `Segunda a Sábado · ${settings.workStart} – ${settings.workEnd}`;
+}
+
+/* ================= BOOKING WIZARD ================= */
+const STEP_LABELS_LOJA = ["Serviço","Profissional","Data","Horário","Seus Dados","Confirmação"];
+const STEP_LABELS_DOM  = ["Serviço","Data","Horário","Localização","Confirmação"];
+
+function openBooking(mode, serviceId){
+  wiz = {
+    mode: mode || "loja",
+    step: 1,
+    serviceId: serviceId ? Number(serviceId) : null,
+    professionalId: professionals[0] ? professionals[0].id : null,
+    date: null,
+    time: null,
+    calMonth: new Date().getMonth(),
+    calYear: new Date().getFullYear(),
+    client:{ nome:"", telefone:"", whatsapp:"", obs:"", bairro:"", rua:"", ref:"" }
+  };
+  document.getElementById("bookingTitle").textContent = wiz.mode==="domicilio" ? "Corte Domiciliar" : "Marcar";
+  document.getElementById("bookingOverlay").classList.add("open");
+  document.body.style.overflow="hidden";
+  renderWizard();
+}
+function closeBooking(){
+  document.getElementById("bookingOverlay").classList.remove("open");
+  document.body.style.overflow="";
+}
+
+function totalSteps(){ return wiz.mode==="domicilio" ? 5 : 6; }
+function stepLabels(){ return wiz.mode==="domicilio" ? STEP_LABELS_DOM : STEP_LABELS_LOJA; }
+
+function renderWizard(){
+  const body = document.getElementById("bookingBody");
+  const foot = document.getElementById("bookingFoot");
+  const labels = stepLabels();
+  const n = totalSteps();
+
+  let progress = `<div class="wizard-progress">`;
+  for(let i=1;i<=n;i++) progress += `<span class="${i<=wiz.step?'done':''}"></span>`;
+  progress += `</div><div class="wizard-step-label">Passo ${wiz.step} de ${n} — ${labels[wiz.step-1]}</div>`;
+
+  let content = "";
+  let mappedStep = wiz.step;
+  // map steps for domicilio flow: 1 service, 2 date, 3 time, 4 location+client, 5 summary
+  if(wiz.mode==="domicilio"){
+    if(mappedStep===1) content = stepService();
+    else if(mappedStep===2) content = stepDate();
+    else if(mappedStep===3) content = stepTime();
+    else if(mappedStep===4) content = stepClient(true);
+    else if(mappedStep===5) content = stepSummary();
+  } else {
+    if(mappedStep===1) content = stepService();
+    else if(mappedStep===2) content = stepProfessional();
+    else if(mappedStep===3) content = stepDate();
+    else if(mappedStep===4) content = stepTime();
+    else if(mappedStep===5) content = stepClient(false);
+    else if(mappedStep===6) content = stepSummary();
+  }
+
+  body.innerHTML = progress + content;
+  renderWizardFoot();
+  attachWizardEvents();
+}
+
+function stepService(){
+  return `<div class="opt-list">` + services.map(s=>`
+    <div class="opt ${wiz.serviceId===s.id?'selected':''}" data-action="pick-service" data-id="${s.id}">
+      <div><div class="o-name">${s.name}</div><div class="o-sub">${s.desc} · ${s.duration} min</div></div>
+      <div class="o-price">${kz(s.price)}</div>
+    </div>`).join("") + `</div>`;
+}
+
+function stepProfessional(){
+  if(professionals.length<=1){
+    const p = professionals[0];
+    wiz.professionalId = p ? p.id : null;
+    return `<div class="opt selected"><div><div class="o-name">${p?p.name:'—'}</div><div class="o-sub">Profissional selecionado automaticamente</div></div></div>`;
+  }
+  return `<div class="opt-list">` + professionals.map(p=>`
+    <div class="opt ${wiz.professionalId===p.id?'selected':''}" data-action="pick-prof" data-id="${p.id}">
+      <div class="o-name">${p.name}</div>
+    </div>`).join("") + `</div>`;
+}
+
+function isDateBlocked(iso, y,m,d){
+  const dow = new Date(y,m,d).getDay();
+  if(settings.daysOff.includes(dow)) return true;
+  if(settings.blockedDates.includes(iso)) return true;
+  if(iso < todayISO()) return true;
+  return false;
+}
+
+function stepDate(){
+  const y=wiz.calYear, m=wiz.calMonth;
+  const first = new Date(y,m,1);
+  const startDow = first.getDay();
+  const daysInMonth = new Date(y,m+1,0).getDate();
+  const monthNames = ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];
+  let cells = "";
+  for(let i=0;i<startDow;i++) cells += `<div class="cal-day empty"></div>`;
+  for(let d=1; d<=daysInMonth; d++){
+    const iso = toISODate(y,m,d);
+    const blocked = isDateBlocked(iso,y,m,d);
+    const selected = wiz.date===iso;
+    cells += `<div class="cal-day ${blocked?'blocked':''} ${selected?'selected':''}" ${blocked?'':`data-action="pick-date" data-iso="${iso}"`}>${d}</div>`;
+  }
+  return `
+    <div class="cal-head">
+      <button data-action="cal-prev">‹</button>
+      <strong style="font-family:'Bebas Neue'; letter-spacing:.05em;">${monthNames[m]} ${y}</strong>
+      <button data-action="cal-next">›</button>
+    </div>
+    <div class="cal-grid">
+      <div class="cal-dow">Dom</div><div class="cal-dow">Seg</div><div class="cal-dow">Ter</div><div class="cal-dow">Qua</div><div class="cal-dow">Qui</div><div class="cal-dow">Sex</div><div class="cal-dow">Sáb</div>
+      ${cells}
+    </div>
+    <small style="color:var(--muted-2); display:block; margin-top:14px; font-size:11.5px;">Dias esbatidos indicam datas indisponíveis ou encerradas.</small>
+  `;
+}
+
+function generateSlots(){
+  const [sh,sm] = settings.workStart.split(":").map(Number);
+  const [eh,em] = settings.workEnd.split(":").map(Number);
+  let start = sh*60+sm, end = eh*60+em;
+  let slots = [];
+  for(let t=start; t+settings.slotMinutes<=end; t+=settings.slotMinutes){
+    slots.push(pad(Math.floor(t/60))+":"+pad(t%60));
+  }
+  return slots;
+}
+
+function stepTime(){
+  if(!wiz.date) return `<div class="no-slots">Selecione primeiro uma data.</div>`;
+  const slots = generateSlots();
+  const taken = bookings.filter(b=>b.date===wiz.date && b.status!=="cancelada").map(b=>b.time);
+  const isToday = wiz.date===todayISO();
+  const now = new Date();
+  const nowMinutes = now.getHours()*60+now.getMinutes();
+
+  const rows = slots.map(t=>{
+    const [h,m] = t.split(":").map(Number);
+    const past = isToday && (h*60+m) <= nowMinutes;
+    const isTaken = taken.includes(t) || past;
+    const selected = wiz.time===t;
+    return `<div class="slot ${isTaken?'taken':''} ${selected?'selected':''}" ${isTaken?'':`data-action="pick-time" data-t="${t}"`}>${t}</div>`;
+  }).join("");
+
+  return `<div class="slot-grid">${rows}</div>`;
+}
+
+function stepClient(isDomicilio){
+  const c = wiz.client;
+  let extra = "";
+  if(isDomicilio){
+    extra = `
+      <div class="field-row two">
+        <div class="field"><label>Bairro</label><input type="text" id="f-bairro" value="${c.bairro}" placeholder="Ex: Talatona"></div>
+        <div class="field"><label>Rua</label><input type="text" id="f-rua" value="${c.rua}" placeholder="Nome da rua"></div>
+      </div>
+      <div class="field"><label>Ponto de referência</label><input type="text" id="f-ref" value="${c.ref}" placeholder="Ex: perto do mercado..."></div>
+    `;
+  }
+  return `
+    <div class="field-row two">
+      <div class="field"><label>Nome completo</label><input type="text" id="f-nome" value="${c.nome}" placeholder="O seu nome"></div>
+      <div class="field"><label>Telefone</label><input type="tel" id="f-telefone" value="${c.telefone}" placeholder="9XX XXX XXX"></div>
+    </div>
+    <div class="field"><label>WhatsApp</label><input type="tel" id="f-whatsapp" value="${c.whatsapp}" placeholder="9XX XXX XXX"></div>
+    ${extra}
+    <div class="field"><label>Observação (opcional)</label><textarea id="f-obs" rows="3" placeholder="Alguma indicação especial?">${c.obs}</textarea></div>
+  `;
+}
+
+function stepSummary(){
+  const s = serviceById(wiz.serviceId);
+  const p = profById(wiz.professionalId);
+  const taxa = wiz.mode==="domicilio" ? settings.taxaDeslocacao : 0;
+  const total = (s?s.price:0) + taxa;
+  return `
+    <div class="summary-box">
+      <div class="s-row"><span>Serviço</span><b>${s?s.name:'—'}</b></div>
+      ${p ? `<div class="s-row"><span>Profissional</span><b>${p.name}</b></div>` : ""}
+      <div class="s-row"><span>Data</span><b>${wiz.date||'—'}</b></div>
+      <div class="s-row"><span>Horário</span><b>${wiz.time||'—'}</b></div>
+      <div class="s-row"><span>Cliente</span><b>${wiz.client.nome||'—'}</b></div>
+      <div class="s-row"><span>Telefone</span><b>${wiz.client.telefone||'—'}</b></div>
+      ${wiz.mode==="domicilio" ? `<div class="s-row"><span>Local</span><b>${wiz.client.bairro||''} ${wiz.client.rua?', '+wiz.client.rua:''}</b></div>` : ""}
+      <div class="s-row"><span>Preço do serviço</span><b>${kz(s?s.price:0)}</b></div>
+      ${wiz.mode==="domicilio" ? `<div class="s-row"><span>Taxa de deslocação</span><b>${kz(taxa)}</b></div>` : ""}
+      <div class="s-total"><span>Total</span><b>${kz(total)}</b></div>
+    </div>
+  `;
+}
+
+function renderWizardFoot(){
+  const foot = document.getElementById("bookingFoot");
+  const s = serviceById(wiz.serviceId);
+  const n = totalSteps();
+
+  if(wiz.step > n){
+    // done state already rendered by showDone(); no footer buttons
+    foot.innerHTML = "";
+    return;
+  }
+
+  let canNext = true;
+  const mode = wiz.mode;
+  const logicalStep = wiz.step;
+  if(mode==="domicilio"){
+    if(logicalStep===1) canNext = !!wiz.serviceId;
+    if(logicalStep===2) canNext = !!wiz.date;
+    if(logicalStep===3) canNext = !!wiz.time;
+    if(logicalStep===4) canNext = true; // validated on click
+  } else {
+    if(logicalStep===1) canNext = !!wiz.serviceId;
+    if(logicalStep===2) canNext = !!wiz.professionalId;
+    if(logicalStep===3) canNext = !!wiz.date;
+    if(logicalStep===4) canNext = !!wiz.time;
+    if(logicalStep===5) canNext = true;
+  }
+
+  let backBtn = wiz.step>1 ? `<button class="btn btn-outline" data-action="wiz-back">Voltar</button>` : "";
+  let nextLabel = (logicalStep===n) ? "Confirmar Marcação" : "Continuar";
+  let nextAction = (logicalStep===n) ? "wiz-confirm" : "wiz-next";
+
+  foot.innerHTML = `${backBtn}<button class="btn btn-gold" style="flex:1;" data-action="${nextAction}" ${canNext?'':'disabled'}>${nextLabel}</button>`;
+}
+
+function attachWizardEvents(){
+  // form field bindings
+  ["f-nome","f-telefone","f-whatsapp","f-obs","f-bairro","f-rua","f-ref"].forEach(id=>{
+    const el = document.getElementById(id);
+    if(el){
+      el.addEventListener("input", ()=>{
+        const key = id.replace("f-","");
+        wiz.client[key] = el.value;
+      });
+    }
+  });
+}
+
+function wizNext(){
+  const n = totalSteps();
+  const mode = wiz.mode;
+  const logicalStep = wiz.step;
+
+  // validate client step
+  const clientStepIndex = mode==="domicilio" ? 4 : 5;
+  if(logicalStep===clientStepIndex){
+    if(!wiz.client.nome || !wiz.client.telefone){
+      toast("Preencha nome e telefone para continuar.");
+      return;
+    }
+    if(mode==="domicilio" && (!wiz.client.bairro || !wiz.client.rua)){
+      toast("Indique bairro e rua para o atendimento domiciliar.");
+      return;
+    }
+  }
+  if(logicalStep < n){
+    wiz.step++;
+    renderWizard();
+  }
+}
+function wizBack(){
+  if(wiz.step>1){ wiz.step--; renderWizard(); }
+}
+
+function wizConfirm(){
+  const s = serviceById(wiz.serviceId);
+  const taxa = wiz.mode==="domicilio" ? settings.taxaDeslocacao : 0;
+  const total = (s?s.price:0) + taxa;
+  const booking = {
+    id: "B" + Date.now(),
+    serviceId: wiz.serviceId,
+    mode: wiz.mode,
+    professionalId: wiz.professionalId,
+    date: wiz.date,
+    time: wiz.time,
+    client: {...wiz.client},
+    price: s?s.price:0,
+    taxa: taxa,
+    total: total,
+    status: "pendente",
+    createdAt: new Date().toISOString()
+  };
+  bookings.push(booking);
+  showDone(booking);
+  renderAdminIfOpen();
+}
+
+function showDone(booking){
+  const s = serviceById(booking.serviceId);
+  const body = document.getElementById("bookingBody");
+  const foot = document.getElementById("bookingFoot");
+  const msg = buildWhatsAppMessage(booking);
+  const waLink = "https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent(msg);
+  document.getElementById("bookingTitle").textContent = "Marcação Confirmada";
+  body.innerHTML = `
+    <div class="done-state">
+      <div class="done-check">✓</div>
+      <h3 style="font-size:26px; margin-bottom:8px;">Marcação Confirmada!</h3>
+      <p style="color:var(--muted); font-size:14px; margin-bottom:22px;">A sua marcação foi registada como <b style="color:var(--gold-light);">pendente</b>. Envie a confirmação via WhatsApp para agilizar o atendimento.</p>
+      <div class="summary-box" style="text-align:left;">
+        <div class="s-row"><span>Serviço</span><b>${s?s.name:''}</b></div>
+        <div class="s-row"><span>Data</span><b>${booking.date}</b></div>
+        <div class="s-row"><span>Horário</span><b>${booking.time}</b></div>
+        <div class="s-total"><span>Total</span><b>${kz(booking.total)}</b></div>
+      </div>
+    </div>
+  `;
+  foot.innerHTML = `
+    <a class="btn btn-gold btn-block" href="${waLink}" target="_blank" rel="noopener">Confirmar via WhatsApp</a>
+  `;
+  wiz.step = totalSteps()+1;
+}
+
+function buildWhatsAppMessage(b){
+  const s = serviceById(b.serviceId);
+  let lines = [
+    "Olá, D'TONGO LEGACY. Gostaria de confirmar a minha marcação.",
+    "",
+    "Nome: "+b.client.nome,
+    "Serviço: "+(s?s.name:''),
+    "Data: "+b.date,
+    "Horário: "+b.time,
+  ];
+  if(b.mode==="domicilio"){
+    lines.push("Modalidade: Corte Domiciliar");
+    lines.push("Local: "+b.client.bairro+", "+b.client.rua+(b.client.ref?" ("+b.client.ref+")":""));
+    lines.push("Taxa de deslocação: "+kz(b.taxa));
+  }
+  lines.push("Preço: "+kz(b.total));
+  return lines.join("\\n");
+}
+
+/* ================= EVENT DELEGATION ================= */
+document.addEventListener("click", function(e){
+  const el = e.target.closest("[data-action]");
+  if(!el) return;
+  const action = el.dataset.action;
+
+  if(action==="open-booking"){
+    openBooking(el.dataset.mode, el.dataset.service);
+  } else if(action==="close-booking"){
+    closeBooking();
+  } else if(action==="pick-service"){
+    wiz.serviceId = Number(el.dataset.id); renderWizard();
+  } else if(action==="pick-prof"){
+    wiz.professionalId = Number(el.dataset.id); renderWizard();
+  } else if(action==="pick-date"){
+    wiz.date = el.dataset.iso; wiz.time=null; renderWizard();
+  } else if(action==="pick-time"){
+    wiz.time = el.dataset.t; renderWizard();
+  } else if(action==="cal-prev"){
+    wiz.calMonth--; if(wiz.calMonth<0){wiz.calMonth=11; wiz.calYear--;} renderWizard();
+  } else if(action==="cal-next"){
+    wiz.calMonth++; if(wiz.calMonth>11){wiz.calMonth=0; wiz.calYear++;} renderWizard();
+  } else if(action==="wiz-next"){
+    wizNext();
+  } else if(action==="wiz-back"){
+    wizBack();
+  } else if(action==="wiz-confirm"){
+    wizConfirm();
+  } else if(action==="open-admin"){
+    openAdmin();
+  } else if(action==="close-admin"){
+    closeAdmin();
+  } else if(action==="admin-login"){
+    doAdminLogin();
+  } else if(action==="admin-logout"){
+    admin.loggedIn=false; renderAdmin();
+  } else if(action==="admin-tab"){
+    adminTab = el.dataset.tab; renderAdmin();
+  } else if(action==="booking-set-status"){
+    setBookingStatus(el.dataset.id, el.dataset.status);
+  } else if(action==="toggle-domicilio"){
+    settings.domicilioAtivo = !settings.domicilioAtivo; renderAdmin();
+  } else if(action==="block-date"){
+    blockDateFromInput();
+  } else if(action==="unblock-date"){
+    settings.blockedDates = settings.blockedDates.filter(d=>d!==el.dataset.iso); renderAdmin();
+  } else if(action==="remove-service"){
+    services = services.filter(s=>s.id!==Number(el.dataset.id)); renderAdmin(); renderServices();
+  } else if(action==="add-service"){
+    addServiceFromInputs();
+  } else if(action==="remove-prof"){
+    professionals = professionals.filter(p=>p.id!==Number(el.dataset.id)); renderAdmin();
+  } else if(action==="add-prof"){
+    addProfFromInput();
+  } else if(action==="save-hours"){
+    saveHoursFromInputs();
+  }
+});
+
+document.getElementById("burgerBtn").addEventListener("click", ()=>{
+  document.getElementById("mobileMenu").classList.toggle("open");
+});
+document.querySelectorAll(".mobile-menu a").forEach(a=>{
+  a.addEventListener("click", ()=> document.getElementById("mobileMenu").classList.remove("open"));
+});
+document.getElementById("bookingOverlay").addEventListener("click", (e)=>{
+  if(e.target.id==="bookingOverlay") closeBooking();
+});
+document.getElementById("adminOverlay").addEventListener("click", (e)=>{
+  if(e.target.id==="adminOverlay") closeAdmin();
+});
+
+/* WhatsApp float link (generic contact message) */
+document.getElementById("waFloat").href = "https://wa.me/"+WHATSAPP_NUMBER+"?text="+encodeURIComponent("Olá, D'Tongo Legacy! Gostaria de mais informações.");
+
+/* ================= ADMIN ================= */
+function openAdmin(){
+  document.getElementById("adminOverlay").classList.add("open");
+  document.body.style.overflow="hidden";
+  renderAdmin();
+}
+function closeAdmin(){
+  document.getElementById("adminOverlay").classList.remove("open");
+  document.body.style.overflow="";
+}
+function renderAdminIfOpen(){
+  if(document.getElementById("adminOverlay").classList.contains("open")) renderAdmin();
+}
+
+function doAdminLogin(){
+  const u = document.getElementById("admin-user").value;
+  const p = document.getElementById("admin-pass").value;
+  if(u==="admin" && p==="dtongo2026"){
+    admin.loggedIn = true;
+    renderAdmin();
+  } else {
+    toast("Credenciais inválidas.");
+  }
+}
+
+function setBookingStatus(id, status){
+  const b = bookings.find(b=>b.id===id);
+  if(b){ b.status = status; renderAdmin(); }
+}
+
+function blockDateFromInput(){
+  const el = document.getElementById("block-date-input");
+  if(el.value && !settings.blockedDates.includes(el.value)){
+    settings.blockedDates.push(el.value);
+    el.value="";
+    renderAdmin();
+  }
+}
+function addServiceFromInputs(){
+  const name = document.getElementById("new-svc-name").value.trim();
+  const price = Number(document.getElementById("new-svc-price").value);
+  const duration = Number(document.getElementById("new-svc-duration").value) || 30;
+  if(!name || !price){ toast("Preencha nome e preço do serviço."); return; }
+  const id = Math.max(0,...services.map(s=>s.id))+1;
+  services.push({id, name, price, desc:"Novo serviço.", duration});
+  renderAdmin(); renderServices();
+  toast("Serviço adicionado.");
+}
+function addProfFromInput(){
+  const name = document.getElementById("new-prof-name").value.trim();
+  if(!name){ toast("Indique o nome do profissional."); return; }
+  const id = Math.max(0,...professionals.map(p=>p.id))+1;
+  professionals.push({id,name});
+  renderAdmin();
+  toast("Profissional adicionado.");
+}
+function saveHoursFromInputs(){
+  settings.workStart = document.getElementById("hr-start").value || settings.workStart;
+  settings.workEnd = document.getElementById("hr-end").value || settings.workEnd;
+  settings.slotMinutes = Number(document.getElementById("hr-slot").value) || settings.slotMinutes;
+  settings.taxaDeslocacao = Number(document.getElementById("hr-taxa").value) || settings.taxaDeslocacao;
+  renderAdmin(); renderServices();
+  toast("Configurações guardadas.");
+}
+
+function renderAdmin(){
+  const body = document.getElementById("adminBody");
+  if(!admin.loggedIn){
+    body.innerHTML = `
+      <div class="admin-login">
+        <p style="color:var(--muted); font-size:13px; margin-bottom:18px;">Acesso restrito à gestão da D'Tongo Legacy.</p>
+        <div class="field"><label>Utilizador</label><input type="text" id="admin-user" placeholder="admin"></div>
+        <div class="field"><label>Senha</label><input type="password" id="admin-pass" placeholder="••••••••"></div>
+        <button class="btn btn-gold btn-block" data-action="admin-login">Entrar</button>
+        <p style="color:var(--muted-2); font-size:11px; margin-top:14px;">Demo: utilizador <b>admin</b> · senha <b>dtongo2026</b></p>
+      </div>
+    `;
+    return;
+  }
+
+  const todayB = bookings.filter(b=>b.date===todayISO());
+  const pendentes = bookings.filter(b=>b.status==="pendente");
+  const confirmadas = bookings.filter(b=>b.status==="confirmada");
+  const faturamentoConfirmado = confirmadas.reduce((acc,b)=>acc+b.total,0);
+
+  let tabsHtml = `
+    <div class="admin-bar">
+      <div class="eyebrow" style="margin:0;">D'Tongo Legacy · Gestão</div>
+      <button class="btn btn-outline btn-sm" data-action="admin-logout">Sair</button>
+    </div>
+    <div class="admin-tabs">
+      <button class="admin-tab ${adminTab==='dashboard'?'active':''}" data-action="admin-tab" data-tab="dashboard">Dashboard</button>
+      <button class="admin-tab ${adminTab==='marcacoes'?'active':''}" data-action="admin-tab" data-tab="marcacoes">Marcações</button>
+      <button class="admin-tab ${adminTab==='servicos'?'active':''}" data-action="admin-tab" data-tab="servicos">Serviços</button>
+      <button class="admin-tab ${adminTab==='barbeiros'?'active':''}" data-action="admin-tab" data-tab="barbeiros">Barbeiros</button>
+      <button class="admin-tab ${adminTab==='horarios'?'active':''}" data-action="admin-tab" data-tab="horarios">Horários</button>
+      <button class="admin-tab ${adminTab==='domicilio'?'active':''}" data-action="admin-tab" data-tab="domicilio">Domicílio</button>
+    </div>
+  `;
+
+  let content = "";
+  if(adminTab==="dashboard"){
+    content = `
+      <div class="kpi-grid">
+        <div class="kpi"><div class="n">${todayB.length}</div><div class="l">Marcações hoje</div></div>
+        <div class="kpi"><div class="n">${pendentes.length}</div><div class="l">Pendentes</div></div>
+        <div class="kpi"><div class="n">${confirmadas.length}</div><div class="l">Confirmadas</div></div>
+        <div class="kpi"><div class="n">${kz(faturamentoConfirmado)}</div><div class="l">Faturação estimada</div></div>
+      </div>
+      ${bookingsTable(bookings.slice().sort((a,b)=>b.createdAt.localeCompare(a.createdAt)).slice(0,8))}
+      <p style="color:var(--muted-2); font-size:11.5px; margin-top:14px;">A mostrar as marcações mais recentes. Consulte a aba "Marcações" para o histórico completo.</p>
+    `;
+  } else if(adminTab==="marcacoes"){
+    content = bookings.length ? bookingsTable(bookings.slice().sort((a,b)=>b.createdAt.localeCompare(a.createdAt))) : `<div class="empty-state">Ainda não existem marcações.</div>`;
+  } else if(adminTab==="servicos"){
+    content = `
+      <div class="admin-card">
+        <h4>Serviços atuais</h4>
+        ${services.map(s=>`
+          <div class="inline-edit">
+            <div class="nm">${s.name} — ${kz(s.price)} · ${s.duration}min</div>
+            <button class="btn btn-danger btn-sm" data-action="remove-service" data-id="${s.id}">Remover</button>
+          </div>
+        `).join("")}
+      </div>
+      <div class="admin-card">
+        <h4>Adicionar serviço</h4>
+        <div class="field-row two">
+          <div class="field"><label>Nome</label><input type="text" id="new-svc-name" placeholder="Nome do serviço"></div>
+          <div class="field"><label>Preço (Kz)</label><input type="number" id="new-svc-price" placeholder="1500"></div>
+        </div>
+        <div class="field"><label>Duração (min)</label><input type="number" id="new-svc-duration" placeholder="30"></div>
+        <button class="btn btn-gold btn-sm" data-action="add-service">Adicionar Serviço</button>
+      </div>
+    `;
+  } else if(adminTab==="barbeiros"){
+    content = `
+      <div class="admin-card">
+        <h4>Profissionais</h4>
+        ${professionals.map(p=>`
+          <div class="inline-edit">
+            <div class="nm">${p.name}</div>
+            <button class="btn btn-danger btn-sm" data-action="remove-prof" data-id="${p.id}">Remover</button>
+          </div>
+        `).join("") || '<p style="color:var(--muted); font-size:13px;">Nenhum profissional registado.</p>'}
+      </div>
+      <div class="admin-card">
+        <h4>Adicionar profissional</h4>
+        <div class="field"><label>Nome</label><input type="text" id="new-prof-name" placeholder="Nome do barbeiro"></div>
+        <button class="btn btn-gold btn-sm" data-action="add-prof">Adicionar</button>
+      </div>
+    `;
+  } else if(adminTab==="horarios"){
+    content = `
+      <div class="admin-card">
+        <h4>Funcionamento</h4>
+        <div class="field-row two">
+          <div class="field"><label>Abertura</label><input type="time" id="hr-start" value="${settings.workStart}"></div>
+          <div class="field"><label>Fecho</label><input type="time" id="hr-end" value="${settings.workEnd}"></div>
+        </div>
+        <div class="field-row two">
+          <div class="field"><label>Intervalo entre marcações (min)</label><input type="number" id="hr-slot" value="${settings.slotMinutes}"></div>
+          <div class="field"><label>Taxa de deslocação (Kz)</label><input type="number" id="hr-taxa" value="${settings.taxaDeslocacao}"></div>
+        </div>
+        <button class="btn btn-gold btn-sm" data-action="save-hours">Guardar Configurações</button>
+      </div>
+      <div class="admin-card">
+        <h4>Bloquear datas / feriados</h4>
+        <div class="inline-edit">
+          <input type="date" id="block-date-input" style="max-width:200px;">
+          <button class="btn btn-outline btn-sm" data-action="block-date">Bloquear</button>
+        </div>
+        ${settings.blockedDates.length ? settings.blockedDates.map(d=>`
+          <div class="inline-edit"><div class="nm">${d}</div><button class="btn btn-danger btn-sm" data-action="unblock-date" data-iso="${d}">Remover</button></div>
+        `).join("") : '<p style="color:var(--muted); font-size:13px;">Nenhuma data bloqueada.</p>'}
+      </div>
+    `;
+  } else if(adminTab==="domicilio"){
+    const domBookings = bookings.filter(b=>b.mode==="domicilio");
+    content = `
+      <div class="admin-card">
+        <h4>Serviço domiciliar</h4>
+        <div class="inline-edit">
+          <div class="nm">Estado atual: <b style="color:${settings.domicilioAtivo?'var(--ok)':'var(--danger)'}">${settings.domicilioAtivo?'Ativo':'Desativado'}</b></div>
+          <button class="btn btn-outline btn-sm" data-action="toggle-domicilio">${settings.domicilioAtivo?'Desativar':'Ativar'}</button>
+        </div>
+        <p style="color:var(--muted); font-size:12.5px; margin-top:6px;">Taxa de deslocação atual: ${kz(settings.taxaDeslocacao)} (edite na aba Horários).</p>
+      </div>
+      <div class="admin-card">
+        <h4>Marcações domiciliares</h4>
+        ${domBookings.length ? bookingsTable(domBookings.slice().sort((a,b)=>b.createdAt.localeCompare(a.createdAt))) : '<p style="color:var(--muted); font-size:13px;">Nenhuma marcação domiciliar até ao momento.</p>'}
+      </div>
+    `;
+  }
+
+  body.innerHTML = tabsHtml + content;
+}
+
+function bookingsTable(list){
+  if(!list.length) return `<div class="empty-state">Sem registos.</div>`;
+  return `
+    <div class="table-wrap">
+      <table class="admin-table">
+        <thead><tr><th>Cliente</th><th>Serviço</th><th>Data</th><th>Hora</th><th>Total</th><th>Estado</th><th>Ações</th></tr></thead>
+        <tbody>
+          ${list.map(b=>{
+            const s = serviceById(b.serviceId);
+            return `<tr>
+              <td>${b.client.nome}<br><span style="font-size:11px; color:var(--muted-2);">${b.client.telefone}</span></td>
+              <td>${s?s.name:''}${b.mode==='domicilio'?'<span class="badge domicilio">Domicílio</span>':''}</td>
+              <td>${b.date}</td>
+              <td>${b.time}</td>
+              <td>${kz(b.total)}</td>
+              <td><span class="badge ${b.status}">${b.status}</span></td>
+              <td>
+                <div class="row-actions">
+                  ${b.status!=='confirmada' ? `<button class="btn btn-ghost btn-sm" data-action="booking-set-status" data-id="${b.id}" data-status="confirmada">Confirmar</button>`:''}
+                  ${b.status!=='cancelada' ? `<button class="btn btn-danger btn-sm" data-action="booking-set-status" data-id="${b.id}" data-status="cancelada">Cancelar</button>`:''}
+                </div>
+              </td>
+            </tr>`;
+          }).join("")}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+/* ================= INIT ================= */
+renderServices();
+</script>
+</body>
+</html>
